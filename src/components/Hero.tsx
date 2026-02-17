@@ -65,10 +65,10 @@ export const Hero: React.FC = () => {
                     className="flex flex-col lg:flex-row justify-between items-center flex-grow gap-[64px]"
                 >
                     {/* Left Content — exact match to original .hp_hero-content */}
-                    <div className="relative z-10 flex flex-col justify-center shrink" style={{ maxWidth: '760px' }}>
+                    <div className="relative z-10 flex flex-col justify-center shrink" style={{ maxWidth: '900px' }}>
                         <div className="mb-4 lg:mb-4">
                             <h1
-                                className="text-[#181D27] text-center lg:text-left"
+                                className="text-[#181D27] text-left"
                                 style={{
                                     fontFamily: 'Fields, Arial, sans-serif',
                                     fontSize: 'clamp(40px, 5vw, 48px)',
@@ -78,16 +78,16 @@ export const Hero: React.FC = () => {
                                 }}
                             >
                                 <div className="overflow-hidden">
-                                    <div className="py-[0.05em]">Build powerful marketing agents.</div>
+                                    <div className="py-[0.05em] whitespace-nowrap">Build powerful marketing agents.</div>
                                 </div>
                                 <div className="overflow-hidden">
-                                    <div className="py-[0.05em]">Activate them everywhere.</div>
+                                    <div className="py-[0.05em] whitespace-nowrap">Activate them everywhere.</div>
                                 </div>
                             </h1>
                         </div>
 
                         <p
-                            className="text-[#181D27] opacity-75 text-center lg:text-left mx-auto lg:mx-0 mb-10"
+                            className="text-[#181D27] opacity-75 text-left mx-0 mb-10"
                             style={{
                                 fontFamily: 'Geist, Arial, sans-serif',
                                 fontSize: '20px',
