@@ -55,92 +55,75 @@ export const Hero: React.FC = () => {
             />
             {/* Hero content wrapper — exact match to original .hp_hero-wrap_top */}
             <div
+                className="mx-auto px-[39.58px] pt-[64px] lg:pt-[72px] h-full flex flex-col justify-between"
                 style={{
                     maxWidth: '1316px',
-                    margin: '0 auto',
-                    paddingTop: '71.25px',
-                    paddingLeft: '39.58px',
-                    paddingRight: '39.58px',
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
                 }}
             >
                 {/* Top Section: Text + Lottie */}
                 <div
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        flexGrow: 1,
-                        gap: '64px',
-                    }}
+                    className="flex flex-col lg:flex-row justify-between items-center flex-grow gap-[64px]"
                 >
                     {/* Left Content — exact match to original .hp_hero-content */}
-                    <div className="relative z-10" style={{ flexShrink: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                        <h1
-                            style={{
-                                fontFamily: 'Fields, Arial, sans-serif',
-                                fontSize: '64px', /* Increased from 48px to match "powerful" visual */
-                                fontWeight: 400,
-                                lineHeight: '1.1',
-                                color: 'rgb(24, 29, 39)',
-                                letterSpacing: '-0.03em',
-                                marginBottom: '24px',
-                            }}
-                        >
-                            Build powerful marketing agents.
-                            <br />
-                            Activate them everywhere.
-                        </h1>
+                    <div className="relative z-10 flex flex-col justify-center shrink" style={{ maxWidth: '760px' }}>
+                        <div className="mb-4 lg:mb-4">
+                            <h1
+                                className="text-[#181D27] text-center lg:text-left"
+                                style={{
+                                    fontFamily: 'Fields, Arial, sans-serif',
+                                    fontSize: 'clamp(40px, 5vw, 48px)',
+                                    fontWeight: 400,
+                                    lineHeight: '1.1',
+                                    letterSpacing: '-1.44px',
+                                }}
+                            >
+                                <div className="overflow-hidden">
+                                    <div className="py-[0.05em]">Build powerful marketing agents.</div>
+                                </div>
+                                <div className="overflow-hidden">
+                                    <div className="py-[0.05em]">Activate them everywhere.</div>
+                                </div>
+                            </h1>
+                        </div>
 
                         <p
+                            className="text-[#181D27] opacity-75 text-center lg:text-left mx-auto lg:mx-0 mb-10"
                             style={{
                                 fontFamily: 'Geist, Arial, sans-serif',
-                                fontSize: '20px', /* Increased from 17.81px */
+                                fontSize: '20px',
                                 fontWeight: 300,
                                 lineHeight: '1.5',
-                                color: 'rgba(24, 29, 39, 0.75)',
-                                marginBottom: '40px',
                                 maxWidth: '540px',
                             }}
                         >
                             Bring deep agentic capabilities to your entire marketing stack.
                         </p>
 
-                        <a
-                            href="#"
-                            className="group inline-flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
-                            style={{
-                                fontFamily: 'Geist, Arial, sans-serif',
-                                background: 'rgb(80, 53, 255)',
-                                color: 'white',
-                                fontWeight: 500,
-                                fontSize: '16px',
-                                padding: '16px 32px',
-                                borderRadius: '59.37px',
-                                textDecoration: 'none',
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                alignSelf: 'flex-start',
-                            }}
-                        >
-                            Book a demo
-                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                        </a>
+                        <div className="flex justify-center lg:justify-start">
+                            <a
+                                href="#"
+                                className="group inline-flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+                                style={{
+                                    fontFamily: 'Geist, Arial, sans-serif',
+                                    background: 'rgb(80, 53, 255)',
+                                    color: 'white',
+                                    fontWeight: 500,
+                                    fontSize: '16px',
+                                    padding: '16px 32px',
+                                    borderRadius: '59.37px',
+                                    textDecoration: 'none',
+                                }}
+                            >
+                                Book a demo
+                                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                            </a>
+                        </div>
                     </div>
 
                     {/* Right Content — Lottie animation */}
                     <div
                         ref={lottieRef}
-                        style={{
-                            width: '500px',
-                            height: '500px',
-                            flexShrink: 0,
-                            display: 'flex',
-                            alignSelf: 'center',
-                        }}
+                        className="w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] shrink-0 flex self-center"
                     />
                 </div>
 
