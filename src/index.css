@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'Fields';
+  src: url('https://cdn.prod.website-files.com/685db6e347bea805032f8390/6876889794f08646adb6195f_Fields%20-%20Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fields';
+  src: url('https://cdn.prod.website-files.com/685db6e347bea805032f8390/68778f19aaacb19281435549_Fields-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.prod.website-files.com/685db6e347bea805032f8390/686dab4117f1233c524e534a_Geist-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.prod.website-files.com/685db6e347bea805032f8390/686dad035ca4d54ff36a7fbc_Geist-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.prod.website-files.com/685db6e347bea805032f8390/687791d032f5c86b7c2e051c_Geist-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GeistMono';
+  src: url('https://cdn.prod.website-files.com/685db6e347bea805032f8390/686daaebadc1938305720ed0_GeistMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    font-family: 'Geist', Arial, sans-serif;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #181d27;
+  font-family: 'Geist', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Page wrapper */
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(80, 53, 255, 0.2);
+  border-radius: 3px;
+}
+
+/* Gradient text utilities */
+.gradient-span-violet {
+  background: linear-gradient(131.22deg, rgb(130, 201, 255) -35.55%, rgb(111, 140, 250) 0.73%, rgb(75, 33, 181) 70.02%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline;
+}
+
+.gradient-span-blue {
+  background: linear-gradient(131.22deg, rgb(130, 201, 255) -35.55%, rgb(111, 140, 250) 0.73%, rgb(75, 33, 181) 70.02%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline;
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 30s linear infinite;
+}
+
+/* Original tildei.com logo ticker animation — 3 copies, shifts by 1/3 */
+@keyframes xloop {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% / 3 - 16px));
+  }
+}
+
+@keyframes xloop-fast {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% / 3 - 16px));
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float-delay {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float-delay 8s ease-in-out infinite;
+}
+
+/* Starfield twinkle animation */
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Particle rain animation */
+@keyframes rain {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
